@@ -28,13 +28,17 @@
       <div class="badge">🎉 Happy Birthday 🎉</div>
       <h1 class="glow-text">Selamat Ulang Tahun, Sayang! 🎂</h1>
       
-      <div class="photo-container">
-        <!-- Ganti foto-foto berikut dengan fotomu -->
-        <div class="polaroid">
-          <img src="photos/foto1.jpg" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=60'" alt="Kenangan 1">
-          <p>Momen Terbaik ✨</p>
-        </div>
-      </div>
+     <div class="photo-container">
+  <div class="polaroid" onclick="nextPhoto()">
+    <img id="polaroid-img" src="photos/foto1.jpg" alt="Kenangan Bersama">
+    <p id="polaroid-caption">Momen Indah Kita ✨ (1/20)</p>
+  </div>
+  <div class="photo-controls">
+    <button type="button" class="btn-nav" onclick="prevPhoto()">❮</button>
+    <span class="tap-hint">Klik foto untuk geser</span>
+    <button type="button" class="btn-nav" onclick="nextPhoto()">❯</button>
+  </div>
+</div>
 
       <div class="letter-box">
         <p>
