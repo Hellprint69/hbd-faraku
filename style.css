@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sacramento&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #4a4a4a;
+}
+
+.container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 30px 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.card.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.envelope-icon {
+  font-size: 70px;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  background: #ffe0e9;
+  color: #d63384;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  background: linear-gradient(45deg, #ff6b81, #ff4757);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 71, 87, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(255, 71, 87, 0.45);
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 20px 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  margin: 15px auto;
+  width: 220px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.03);
+}
+
+.polaroid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.polaroid p {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+.letter-box {
+  background: #fff6f8;
+  border: 1px dashed #ffb8c6;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: left;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #555;
+}
+
+.letter-box p {
+  margin-bottom: 10px;
+}
+
+.candle-section {
+  margin: 25px 0 10px 0;
+  cursor: pointer;
+}
+
+.candle {
+  width: 18px;
+  height: 45px;
+  background: repeating-linear-gradient(45deg, #ff9a9e, #ff9a9e 6px, #ffffff 6px, #ffffff 12px);
+  margin: 0 auto 10px auto;
+  border-radius: 4px;
+  position: relative;
+}
+
+.flame {
+  width: 12px;
+  height: 18px;
+  background: #ffa502;
+  border-radius: 50% 50% 20% 20%;
+  position: absolute;
+  top: -18px;
+  left: 3px;
+  box-shadow: 0 0 12px #ffa502, 0 0 20px #ff6348;
+  animation: flicker 0.6s infinite alternate;
+}
+
+.flame.off {
+  display: none;
+}
+
+.footer-msg {
+  font-family: 'Sacramento', cursive;
+  font-size: 1.8rem;
+  color: #ff4757;
+  margin-top: 15px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes flicker {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
