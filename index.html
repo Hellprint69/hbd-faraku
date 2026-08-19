@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Sayang! ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Audio Latar (Ganti src ke file musikmu) -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="container">
+    <!-- Step 1: Layar Pembuka -->
+    <div id="step-1" class="card active">
+      <div class="envelope-icon">💌</div>
+      <h2>Ada surat spesial buat kamu...</h2>
+      <p>Klik tombol di bawah ini ya!</p>
+      <button class="btn" onclick="openLetter()">Buka Surat ❤️</button>
+    </div>
+
+    <!-- Step 2: Halaman Utama Ucapan -->
+    <div id="step-2" class="card hidden">
+      <div class="badge">🎉 Happy Birthday 🎉</div>
+      <h1 class="glow-text">Selamat Ulang Tahun, Sayang! 🎂</h1>
+      
+      <div class="photo-container">
+        <!-- Ganti foto-foto berikut dengan fotomu -->
+        <div class="polaroid">
+          <img src="photos/foto1.jpg" onerror="this.src='https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=60'" alt="Kenangan 1">
+          <p>Momen Terbaik ✨</p>
+        </div>
+      </div>
+
+      <div class="letter-box">
+        <p>
+          Selamat bertambah usia ya! Semoga di usiamu yang baru ini, kamu selalu diberikan kesehatan, 
+          kebahagiaan yang melimpah, dan segala impian serta cita-citamu dimudahkan untuk tercapai.
+        </p>
+        <p>
+          Terima kasih sudah selalu ada, selalu sabar, dan menjadi alasan tersenyum setiap hari. 
+          I'm so lucky to have you in my life. Semoga kita bisa terus rayakan ulang tahun berikutnya bareng-bareng ya! ❤️
+        </p>
+      </div>
+
+      <!-- Fitur Interaktif Lilin -->
+      <div class="candle-section" id="candle-area">
+        <div class="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+        <p id="candle-text">Make a wish, lalu klik lilinnya untuk tiup! 🕯️</p>
+      </div>
+
+      <div class="footer-msg">With all my love ✨</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
